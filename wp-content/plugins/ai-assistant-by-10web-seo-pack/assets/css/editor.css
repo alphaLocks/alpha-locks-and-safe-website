@@ -1,0 +1,89 @@
+#wpseo-metabox-root #taa_yoast_meta_description .twai-simple-button {
+    padding: 6px 16px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+#taa_yoast_meta_description{
+    margin-left: auto;
+    margin-right: 10px;
+    width: 174px;
+}
+#taa_yoast_meta_description +button{
+    margin-left: initial;
+}
+
+#wpseo-metabox-root .twai-simple-button {
+    padding: 2px 8px;
+    min-height: 22px;
+    text-align: center;
+    font: normal normal 600 12px/18px Open Sans;
+    letter-spacing: 0.1px;
+    border-radius: 6px;
+}
+
+li.twai-yoast-suggestion-element {
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+li.twai-yoast-suggestion-element > p {
+    width: calc(100% - 50px);
+}
+li.twai-yoast-suggestion-element .twai-button-cont {
+    margin: 4px 0 4px 25px;
+}
+
+
+.twai-tooltip {
+    background: #23282D 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF1A;
+    border-radius: 6px;
+    width: 300px;
+    padding: 20px;
+    cursor: default;
+}
+
+#wpseo-metabox-root #taa_yoast_meta_description .twai-simple-button .twai-tooltip {
+    margin-top: 7px;
+}
+
+#wpseo-metabox-root .twai-simple-button .twai-tooltip {
+    margin-top: 3px;
+}
+
+.twai-tooltip p {
+    background: url(/wp-content/plugins/ai-assistant-by-10web-seo-pack/assets/images/info_icon.svg) 0% 2px no-repeat;
+    padding: 0 0 0 22px;
+    margin: 0;
+    font: normal normal bold 12px/18px Open Sans;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+
+.twai-tooltip a,
+.twai-tooltip li {
+    font: normal normal normal 12px/18px Open Sans;
+    letter-spacing: 0.1px;
+    color: #FFFFFFCC;
+}
+.twai-tooltip a {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+.twai-tooltip ul {
+    margin-top: 8px;
+}
+
+.twai-tooltip li {
+    background: url(/wp-content/plugins/ai-assistant-by-10web-seo-pack/assets/images/disc.svg) no-repeat;
+    background-position: 0px center;
+    background-size: 15px;
+    padding-left: 22px;
+    margin-bottom: 6px;
+}
+
+.taa-hidden {
+    display: none !important;
+}
