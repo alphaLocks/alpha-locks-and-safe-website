@@ -1,0 +1,10 @@
+<svg id="Close_Error_Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_47801" data-name="Rectangle 47801" width="18" height="18" fill="#fd3c31"/>
+    </clipPath>
+  </defs>
+  <g id="Close_Error_Icon-2" data-name="Close_Error_Icon" clip-path="url(#clip-path)">
+    <path id="Subtraction_23" data-name="Subtraction 23" d="M6,12a6,6,0,1,1,6-6A6.007,6.007,0,0,1,6,12ZM4.012,3.176a.658.658,0,0,0-.5.271.7.7,0,0,0,.11.923L5.083,5.828,3.457,7.456a.754.754,0,0,0-.2.519.756.756,0,0,0,.2.427l.039.039.029.029a.591.591,0,0,0,.374.126.754.754,0,0,0,.527-.219L6,6.8l1.57,1.57a.661.661,0,0,0,.487.178H8.07a.692.692,0,0,0,.5-.271.726.726,0,0,0-.109-.923l-1.5-1.5L8.4,4.4a.756.756,0,0,0,.2-.519.748.748,0,0,0-.2-.427l-.044-.044-.024-.023a.582.582,0,0,0-.374-.126.749.749,0,0,0-.526.22l-1.4,1.4-1.5-1.5a.745.745,0,0,0-.512-.2Z" transform="translate(3 2.999)" fill="#fd3c31"/>
+  </g>
+</svg>
