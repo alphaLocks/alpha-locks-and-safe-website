@@ -119,8 +119,8 @@
 }
 .elementor-lightbox .elementor-video-container .elementor-video-square iframe,
 .elementor-lightbox .elementor-video-container .elementor-video-square video {
-  width: min(90vh, 90vw);
-  height: min(90vh, 90vw);
+  width: 90vmin;
+  height: 90vmin;
 }
 .elementor-lightbox .elementor-video-container .elementor-video-landscape iframe,
 .elementor-lightbox .elementor-video-container .elementor-video-landscape video {
