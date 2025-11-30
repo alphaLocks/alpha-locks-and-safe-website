@@ -8,7 +8,6 @@
     content: "\f142";
     display: inline-block;
     font: normal 20px/1 dashicons;
-    speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-decoration: none !important; }
@@ -94,8 +93,7 @@
     direction: ltr; }
 
 .about-wrap .cptui-feature {
-  overflow: visible !important;
-  *zoom: 1; }
+  overflow: visible !important; }
   .about-wrap .cptui-feature:before, .about-wrap .cptui-feature:after {
     content: " ";
     display: table; }
@@ -130,7 +128,6 @@
       display: inline-block;
       position: relative;
       text-align: center;
-      speak: none;
       margin: 0 0 0 -100px;
       content: "\e01d";
       -webkit-font-smoothing: antialiased;
@@ -215,8 +212,6 @@
     margin-right: 20px; }
 
 .wdspromos-about {
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -297,7 +292,6 @@
       height: 20px;
       font-size: 20px; }
     .dashicon-picker-container ul li {
-      display: inline-block;
       margin: 5px;
       float: left; }
       .dashicon-picker-container ul li a {
