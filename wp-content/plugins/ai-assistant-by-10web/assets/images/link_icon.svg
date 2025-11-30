@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_47796" data-name="Rectangle 47796" width="16" height="16" transform="translate(0 0)" fill="#f1f1f1"/>
+    </clipPath>
+  </defs>
+  <g id="Navigation_Link_Icon" opacity="0.8">
+    <g id="Navigation_Link_Icon-2" data-name="Navigation_Link_Icon" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="design_system_icons-58" data-name="design system icons-58" d="M.159,3.855a.824.824,0,0,0,.675.374.8.8,0,0,0,.7-.288l.534-.6V9.724a.955.955,0,0,0,.675.921.9.9,0,0,0,1.1-.892V3.28l.534.6a.886.886,0,0,0,1.547-.6.941.941,0,0,0-.225-.6L3.619.288A.846.846,0,0,0,2.972,0a.906.906,0,0,0-.647.288L.272,2.618A1.025,1.025,0,0,0,.159,3.855Z" transform="translate(9.676 2.133) rotate(45)" fill="#f1f1f1"/>
+    </g>
+  </g>
+</svg>
