@@ -956,7 +956,7 @@ select {
   padding: 0 15px;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(min(135px, 50% - 5px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
 }
 .elementor-panel .elementor-responsive-panel > .e-responsive-panel-stretch {
   grid-column: 1/-1;
@@ -1608,7 +1608,7 @@ body.elementor-panel-loading #elementor-panel-state-loading {
   margin-block-start: -14px;
   min-height: 40px;
   display: block;
-  padding: 9px min(35px, 5%);
+  padding: 9px 5%;
   gap: 10px;
   background-color: var(--e-a-color-white);
   color: var(--e-a-color-black);
