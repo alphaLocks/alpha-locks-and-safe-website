@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <script data-pagespeed-no-defer data-two-no-delay type="text/javascript">
@@ -308,24 +308,24 @@
           } catch (e) {}
         }
         function p(e, t, n) {
-          (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
-            e.fillText(t, 0, 0));
+          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0);
           var t = new Uint32Array(
-              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data,
+              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
             ),
             a =
               (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
               e.fillText(n, 0, 0),
               new Uint32Array(
-                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data,
+                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
               ));
           return t.every(function (e, t) {
             return e === a[t];
           });
         }
         function u(e, t) {
-          (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
-            e.fillText(t, 0, 0));
+          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0);
           for (
             var n = e.getImageData(16, 16, 1, 1), a = 0;
             a < n.data.length;
@@ -340,18 +340,18 @@
               return n(
                 e,
                 "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
-                "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f",
+                "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"
               )
                 ? !1
                 : !n(
                     e,
                     "\ud83c\udde8\ud83c\uddf6",
-                    "\ud83c\udde8\u200b\ud83c\uddf6",
+                    "\ud83c\udde8\u200b\ud83c\uddf6"
                   ) &&
                     !n(
                       e,
                       "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
-                      "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f",
+                      "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
                     );
             case "emoji":
               return !a(e, "\ud83e\udedf");
@@ -375,7 +375,7 @@
         }
         function t(e) {
           var t = s.createElement("script");
-          ((t.src = e), (t.defer = !0), s.head.appendChild(t));
+          (t.src = e), (t.defer = !0), s.head.appendChild(t);
         }
         "undefined" != typeof Promise &&
           ((o = "wpEmojiSettingsSupports"),
@@ -423,7 +423,7 @@
                       name: "wpTestEmojiSupports",
                     });
                   return void (r.onmessage = function (e) {
-                    (c((n = e.data)), r.terminate(), t(n));
+                    c((n = e.data)), r.terminate(), t(n);
                   });
                 } catch (e) {}
               c((n = g(i, f, p, u)));
@@ -432,18 +432,18 @@
           })
             .then(function (e) {
               for (var t in e)
-                ((n.supports[t] = e[t]),
+                (n.supports[t] = e[t]),
                   (n.supports.everything =
                     n.supports.everything && n.supports[t]),
                   "flag" !== t &&
                     (n.supports.everythingExceptFlag =
-                      n.supports.everythingExceptFlag && n.supports[t]));
-              ((n.supports.everythingExceptFlag =
+                      n.supports.everythingExceptFlag && n.supports[t]);
+              (n.supports.everythingExceptFlag =
                 n.supports.everythingExceptFlag && !n.supports.flag),
                 (n.DOMReady = !1),
                 (n.readyCallback = function () {
                   n.DOMReady = !0;
-                }));
+                });
             })
             .then(function () {
               return e;
@@ -575,8 +575,8 @@
         --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
         --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
         --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
-        --wp--preset--shadow--outlined:
-          6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+          6px 6px rgba(0, 0, 0, 1);
         --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
       }
       :root {
@@ -929,9 +929,7 @@
         visibility: hidden;
         opacity: 0;
         transform: translateY(8px);
-        transition:
-          opacity 0.2s ease,
-          transform 0.2s ease;
+        transition: opacity 0.2s ease, transform 0.2s ease;
       }
       .elementor-280
         .elementor-element.elementor-element-282f847
@@ -3345,7 +3343,7 @@
             document.removeEventListener(
               event,
               two_load_delayed_javascript,
-              false,
+              false
             );
           });
         }
@@ -3374,27 +3372,27 @@
                 var touch = event.changedTouches[0];
                 element = document.elementFromPoint(
                   touch.clientX,
-                  touch.clientY,
+                  touch.clientY
                 );
                 element.dispatchEvent(
-                  t("touchstart", touch.clientX, touch.clientY),
+                  t("touchstart", touch.clientX, touch.clientY)
                 );
                 element.dispatchEvent(
-                  t("touchend", touch.clientX, touch.clientY),
+                  t("touchend", touch.clientX, touch.clientY)
                 );
                 element.dispatchEvent(t("click", touch.clientX, touch.clientY));
               } else if (event && event.type === "click") {
                 element = document.elementFromPoint(
                   event.clientX,
-                  event.clientY,
+                  event.clientY
                 );
                 element.dispatchEvent(
-                  t(event.type, event.clientX, event.clientY),
+                  t(event.type, event.clientX, event.clientY)
                 );
               }
             };
           })(event),
-          150,
+          150
         );
       }
     </script>
@@ -3419,7 +3417,7 @@
               window.two_event_listeners[ev] = document.addEventListener(
                 ev,
                 two_load_delayed_javascript,
-                { passive: false },
+                { passive: false }
               );
             });
           }
@@ -3428,7 +3426,7 @@
               window.two_event_listeners_css[ev] = document.addEventListener(
                 ev,
                 two_load_delayed_css,
-                { passive: false },
+                { passive: false }
               );
             });
           }
@@ -3437,7 +3435,7 @@
               window.two_iframe_event_listeners[ev] = document.addEventListener(
                 ev,
                 two_load_delayed_iframe,
-                { passive: false },
+                { passive: false }
               );
             });
           }
@@ -3989,7 +3987,9 @@
                       <li
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1193"
                       >
-                        <a href="services/index.html" class="elementor-item">Services</a>
+                        <a href="services/index.html" class="elementor-item"
+                          >Services</a
+                        >
                         <ul class="sub-menu elementor-nav-menu--dropdown">
                           <li
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-287"
@@ -4003,14 +4003,18 @@
                           <li
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288"
                           >
-                            <a href="commercial/index.html" class="elementor-sub-item"
+                            <a
+                              href="commercial/index.html"
+                              class="elementor-sub-item"
                               >Commercial</a
                             >
                           </li>
                           <li
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-285"
                           >
-                            <a href="residential/index.html" class="elementor-sub-item"
+                            <a
+                              href="residential/index.html"
+                              class="elementor-sub-item"
                               >Residential</a
                             >
                             <ul class="sub-menu elementor-nav-menu--dropdown">
@@ -4135,7 +4139,9 @@
                       <li
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1183"
                       >
-                        <a href="service-areas/index.html" class="elementor-item"
+                        <a
+                          href="service-areas/index.html"
+                          class="elementor-item"
                           >Service Areas</a
                         >
                         <ul class="sub-menu elementor-nav-menu--dropdown">
@@ -4284,12 +4290,16 @@
                       <li
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391"
                       >
-                        <a href="price/index.html" class="elementor-item">Flat Price</a>
+                        <a href="price/index.html" class="elementor-item"
+                          >Flat Price</a
+                        >
                       </li>
                       <li
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"
                       >
-                        <a href="blog/index.html" class="elementor-item">Blog</a>
+                        <a href="blog/index.html" class="elementor-item"
+                          >Blog</a
+                        >
                       </li>
                       <li
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289"
@@ -4673,14 +4683,20 @@
                       <li
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391"
                       >
-                        <a href="price/index.html" class="elementor-item" tabindex="-1"
+                        <a
+                          href="price/index.html"
+                          class="elementor-item"
+                          tabindex="-1"
                           >Flat Price</a
                         >
                       </li>
                       <li
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"
                       >
-                        <a href="blog/index.html" class="elementor-item" tabindex="-1"
+                        <a
+                          href="blog/index.html"
+                          class="elementor-item"
+                          tabindex="-1"
                           >Blog</a
                         >
                       </li>
@@ -4980,7 +4996,9 @@
                           <h5
                             class="elementor-heading-title elementor-size-default"
                           >
-                            <a href="residential/index.html">Residential&nbsp;</a>
+                            <a href="residential/index.html"
+                              >Residential&nbsp;</a
+                            >
                           </h5>
                         </div>
                       </div>
@@ -5018,7 +5036,9 @@
                           <h5
                             class="elementor-heading-title elementor-size-default"
                           >
-                            <a href="commercial/index.html">Commercial&nbsp; </a>
+                            <a href="commercial/index.html"
+                              >Commercial&nbsp;
+                            </a>
                           </h5>
                         </div>
                       </div>
@@ -5056,7 +5076,9 @@
                           <h5
                             class="elementor-heading-title elementor-size-default"
                           >
-                            <a href="automotive/index.html">Automotive &nbsp;</a>
+                            <a href="automotive/index.html"
+                              >Automotive &nbsp;</a
+                            >
                           </h5>
                         </div>
                       </div>
@@ -6850,8 +6872,8 @@
                             to your security. Choose our reliable and affordable
                             locksmith service in NYC and experience peace of
                             mind knowing your locks are in capable hands.
-                            <a href="contact-us/index.html">Contact us</a> today for a
-                            free quote and let us help you with all your
+                            <a href="contact-us/index.html">Contact us</a> today
+                            for a free quote and let us help you with all your
                             locksmith needs.
                           </p>
                         </div>
@@ -7051,7 +7073,9 @@
                               <li
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1193"
                               >
-                                <a href="services/index.html" class="elementor-item"
+                                <a
+                                  href="services/index.html"
+                                  class="elementor-item"
                                   >Services</a
                                 >
                                 <ul
@@ -7212,7 +7236,9 @@
                               <li
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1183"
                               >
-                                <a href="service-areas/index.html" class="elementor-item"
+                                <a
+                                  href="service-areas/index.html"
+                                  class="elementor-item"
                                   >Service Areas</a
                                 >
                                 <ul
@@ -7363,19 +7389,25 @@
                               <li
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391"
                               >
-                                <a href="price/index.html" class="elementor-item"
+                                <a
+                                  href="price/index.html"
+                                  class="elementor-item"
                                   >Flat Price</a
                                 >
                               </li>
                               <li
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"
                               >
-                                <a href="blog/index.html" class="elementor-item">Blog</a>
+                                <a href="blog/index.html" class="elementor-item"
+                                  >Blog</a
+                                >
                               </li>
                               <li
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289"
                               >
-                                <a href="contact-us/index.html" class="elementor-item"
+                                <a
+                                  href="contact-us/index.html"
+                                  class="elementor-item"
                                   >Contact Us</a
                                 >
                               </li>
@@ -8504,13 +8536,13 @@
                   let animation = settings.animation
                     ? settings.animation
                     : settings._animation
-                      ? settings._animation
-                      : "zoomIn";
+                    ? settings._animation
+                    : "zoomIn";
                   let delay = settings.animation_delay
                     ? settings.animation_delay
                     : settings._animation_delay
-                      ? settings._animation_delay
-                      : 0;
+                    ? settings._animation_delay
+                    : 0;
                   setTimeout(() => {
                     item.target.className =
                       item.target.className.replace("elementor-invisible", "") +
@@ -8556,7 +8588,7 @@
           callback_applied: function (element, instance) {
             let settings = instance._settings;
             var bgDataValue = element.getAttribute(
-              "data-" + settings.data_bg_multi,
+              "data-" + settings.data_bg_multi
             );
             if (!bgDataValue) {
               return;

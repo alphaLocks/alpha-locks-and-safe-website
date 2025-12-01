@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <script data-pagespeed-no-defer data-two-no-delay type="text/javascript">
@@ -331,7 +331,7 @@
             document.removeEventListener(
               event,
               two_load_delayed_javascript,
-              false,
+              false
             );
           });
         }
@@ -360,27 +360,27 @@
                 var touch = event.changedTouches[0];
                 element = document.elementFromPoint(
                   touch.clientX,
-                  touch.clientY,
+                  touch.clientY
                 );
                 element.dispatchEvent(
-                  t("touchstart", touch.clientX, touch.clientY),
+                  t("touchstart", touch.clientX, touch.clientY)
                 );
                 element.dispatchEvent(
-                  t("touchend", touch.clientX, touch.clientY),
+                  t("touchend", touch.clientX, touch.clientY)
                 );
                 element.dispatchEvent(t("click", touch.clientX, touch.clientY));
               } else if (event && event.type === "click") {
                 element = document.elementFromPoint(
                   event.clientX,
-                  event.clientY,
+                  event.clientY
                 );
                 element.dispatchEvent(
-                  t(event.type, event.clientX, event.clientY),
+                  t(event.type, event.clientX, event.clientY)
                 );
               }
             };
           })(event),
-          150,
+          150
         );
       }
     </script>
@@ -405,7 +405,7 @@
               window.two_event_listeners[ev] = document.addEventListener(
                 ev,
                 two_load_delayed_javascript,
-                { passive: false },
+                { passive: false }
               );
             });
           }
@@ -414,7 +414,7 @@
               window.two_event_listeners_css[ev] = document.addEventListener(
                 ev,
                 two_load_delayed_css,
-                { passive: false },
+                { passive: false }
               );
             });
           }
@@ -423,7 +423,7 @@
               window.two_iframe_event_listeners[ev] = document.addEventListener(
                 ev,
                 two_load_delayed_iframe,
-                { passive: false },
+                { passive: false }
               );
             });
           }
@@ -2060,7 +2060,9 @@
                           <h5
                             class="elementor-heading-title elementor-size-default"
                           >
-                            <a href="commercial/index.html">Commercial&nbsp; </a>
+                            <a href="commercial/index.html"
+                              >Commercial&nbsp;
+                            </a>
                           </h5>
                         </div>
                       </div>
@@ -5579,13 +5581,13 @@
                   let animation = settings.animation
                     ? settings.animation
                     : settings._animation
-                      ? settings._animation
-                      : "zoomIn";
+                    ? settings._animation
+                    : "zoomIn";
                   let delay = settings.animation_delay
                     ? settings.animation_delay
                     : settings._animation_delay
-                      ? settings._animation_delay
-                      : 0;
+                    ? settings._animation_delay
+                    : 0;
                   setTimeout(() => {
                     item.target.className =
                       item.target.className.replace("elementor-invisible", "") +
@@ -5631,7 +5633,7 @@
           callback_applied: function (element, instance) {
             let settings = instance._settings;
             var bgDataValue = element.getAttribute(
-              "data-" + settings.data_bg_multi,
+              "data-" + settings.data_bg_multi
             );
             if (!bgDataValue) {
               return;

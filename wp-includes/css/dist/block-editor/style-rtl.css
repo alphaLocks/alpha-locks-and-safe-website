@@ -2677,9 +2677,9 @@ iframe[name=editor-canvas]{
   width:100%;
 }
 .block-editor-list-view-leaf .block-editor-list-view-block-select-button__anchor-wrapper{
-  max-width:min(110px, 40%);
+  width:40%;
+  max-width:110px;
   position:relative;
-  width:100%;
 }
 .block-editor-list-view-leaf .block-editor-list-view-block-select-button__anchor{
   left:0;

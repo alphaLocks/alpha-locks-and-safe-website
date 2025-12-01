@@ -169,6 +169,7 @@
 .components-button{
   align-items:center;
   -webkit-appearance:none;
+  appearance:none;
   background:none;
   border:0;
   border-radius:2px;
@@ -512,12 +513,10 @@ p+.components-button.is-tertiary{
 }
 .components-checkbox-control__input[type=checkbox][aria-checked=mixed]:before{
   content:"\f460";
-  display:inline-block;
+  display:block;
   float:right;
   font:normal 30px/1 dashicons;
-  vertical-align:middle;
   width:16px;
-  speak:none;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
@@ -2032,7 +2031,6 @@ body.is-dragging-components-draggable{
   }
 }
 body.rtl .components-panel__body-toggle.components-button .dashicons-arrow-right{
-  -ms-filter:fliph;
   filter:FlipH;
   margin-top:-10px;
   transform:scaleX(-1);
@@ -2088,8 +2086,8 @@ body.rtl .components-panel__body-toggle.components-button .dashicons-arrow-right
   position:relative;
   text-align:right;
   width:100%;
-  -moz-font-smoothing:subpixel-antialiased;
   -webkit-font-smoothing:subpixel-antialiased;
+  -moz-osx-font-smoothing:grayscale;
   background-color:#fff;
   border-radius:2px;
   box-shadow:inset 0 0 0 1px #1e1e1e;

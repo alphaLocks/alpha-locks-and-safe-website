@@ -940,9 +940,6 @@ div.dataviews-view-list{
 .dataviews-view-table .dataviews-view-table-header-button:not(:hover){
   color:#1e1e1e;
 }
-.dataviews-view-table .dataviews-view-table-header-button span{
-  speak:none;
-}
 .dataviews-view-table .dataviews-view-table-header-button span:empty{
   display:none;
 }
