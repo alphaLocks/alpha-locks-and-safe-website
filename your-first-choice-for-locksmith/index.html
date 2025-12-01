@@ -19,7 +19,7 @@
       Your First Choice For Locksmith - ALPHA LOCKS AND SAFE 24 hours locksmith
       service in New York!
     </title>
-    <link rel="canonical" href="/your-first-choice-for-locksmith/" />
+    <link rel="canonical" href="https://alphalockandsafe.com/your-first-choice-for-locksmith/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Your First Choice For Locksmith" />
@@ -246,6 +246,32 @@
       .lazyload,
       .lazyloading {
         max-width: 100%;
+      }
+      /* Accessibility: Make skip link focusable */
+      .skip-link.screen-reader-text:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        clip-path: none;
+        color: #21759b;
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000;
+      }
+      /* Accessibility: Increase touch target sizes */
+      .elementor-swiper-button {
+        min-width: 48px;
+        min-height: 48px;
+        padding: 12px;
       }
     </style>
     <script>
@@ -1348,13 +1374,13 @@
                 data-widget_type="image.default"
               >
                 <div class="elementor-widget-container">
-                  <a href="../index.html">
+                  <a href="../index.html" aria-label="Alpha Locks And Safe - Home">
                     <img
                       width="408"
                       height="216"
                       data-src="/wp-content/uploads/2022/12/preview-1-copy.png"
                       class="attachment-full size-full wp-image-269 lazyload"
-                      alt=""
+                      alt="Alpha Locks And Safe Logo"
                       data-srcset="/wp-content/uploads/2022/12/preview-1-copy.png 408w, /wp-content/uploads/2022/12/preview-1-copy-300x159.png 300w"
                       data-sizes="(max-width: 408px) 100vw, 408px"
                       src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg=="
@@ -2390,6 +2416,7 @@
         </div>
       </section>
     </header>
+    <main id="content" role="main">
     <div
       data-elementor-type="single-post"
       data-elementor-id="530"
@@ -2602,11 +2629,11 @@
                                     </div>
 
                                     <div class="elementor-icon-box-content">
-                                      <h5 class="elementor-icon-box-title">
+                                      <h3 class="elementor-icon-box-title">
                                         <a href="tel:+1%20929-367-6689">
                                           Contact
                                         </a>
-                                      </h5>
+                                      </h3>
 
                                       <p class="elementor-icon-box-description">
                                         Phone: +1 929-367-6689
@@ -2639,9 +2666,9 @@
                                     </div>
 
                                     <div class="elementor-icon-box-content">
-                                      <h5 class="elementor-icon-box-title">
+                                      <h3 class="elementor-icon-box-title">
                                         <span> Email </span>
-                                      </h5>
+                                      </h3>
 
                                       <p class="elementor-icon-box-description">
                                         alphalocksny@gmail.com
@@ -2674,9 +2701,9 @@
                                     </div>
 
                                     <div class="elementor-icon-box-content">
-                                      <h5 class="elementor-icon-box-title">
+                                      <h3 class="elementor-icon-box-title">
                                         <span> Our Address </span>
-                                      </h5>
+                                      </h3>
 
                                       <p class="elementor-icon-box-description">
                                         28102 Town Green Dr, Elmsford, NY 10523,
@@ -2715,9 +2742,9 @@
                                     </div>
 
                                     <div class="elementor-icon-box-content">
-                                      <h5 class="elementor-icon-box-title">
+                                      <h3 class="elementor-icon-box-title">
                                         <a href="../index.html"> Website </a>
-                                      </h5>
+                                      </h3>
 
                                       <p class="elementor-icon-box-description">
                                         www.alphalockandsafe.com
@@ -3806,6 +3833,7 @@
         </div>
       </section>
     </div>
+    </main>
     <footer
       data-elementor-type="footer"
       data-elementor-id="263"
@@ -4866,6 +4894,7 @@
                       >
                         <div class="elementor-widget-container">
                           <iframe
+                            title="Alpha Locks And Safe Location Map"
                             data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12035.05390570886!2d-73.8311468!3d41.0523012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x852b8175ff482fad%3A0x3e75cef672a1a226!2sAlpha%20Locks%20And%20Safe!5e0!3m2!1sen!2sus!4v1686505251000!5m2!1sen!2sus"
                             width="600"
                             height="450"
