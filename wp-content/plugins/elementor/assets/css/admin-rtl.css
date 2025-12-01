@@ -787,7 +787,6 @@ body .block-editor #elementor-switch-mode .button i {
 
 .elementor-button-spinner:before {
   font: normal 20px/0.5 dashicons;
-  speak: none;
   display: inline-block;
   padding: 0;
   inset-block-start: 8px;
@@ -1573,7 +1572,6 @@ fieldset:disabled a.e-button {
   color: var(--e-notice-dismiss-color);
   width: 20px;
   border-radius: 20px;
-  speak: none;
   text-align: center;
 }
 .e-notice__dismiss:hover:before, .e-notice__dismiss:active:before, .e-notice__dismiss:focus:before {
