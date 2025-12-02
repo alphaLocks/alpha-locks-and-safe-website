@@ -90,3 +90,25 @@ function two_replace_backgrounds(elementor_elements = false) {
     }
 }
 
+(function two_patch_worker_script(){
+    function ensureWorkerPatched(){
+        var workerScript = document.getElementById("two_worker");
+        if(!workerScript){
+            return false;
+        }
+        if(workerScript.dataset.twoWorkerPatched === "1"){
+            return true;
+        }
+        var scriptContent = workerScript.textContent || "";
+        if(scriptContent.indexOf("importScripts") !== -1 && scriptContent.indexOf("two_worker.js") !== -1){
+            workerScript.dataset.twoWorkerPatched = "1";
+            return true;
+        }
+        workerScript.textContent = "if (typeof self.two_font_actions_setting === 'undefined') { self.two_font_actions_setting = 'not_load'; }\\nimportScripts('/wp-content/plugins/tenweb-speed-optimizer/includes/external/js/two_worker.js');";
+        workerScript.dataset.twoWorkerPatched = "1";
+        return true;
+    }
+    if(!ensureWorkerPatched()){
+        document.addEventListener("DOMContentLoaded", ensureWorkerPatched);
+    }
+})();

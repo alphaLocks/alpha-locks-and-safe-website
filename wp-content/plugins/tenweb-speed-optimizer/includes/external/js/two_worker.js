@@ -1,8 +1,12 @@
+const two_worker_font_actions = (typeof self !== "undefined" && typeof self.two_font_actions_setting !== "undefined") ?
+    self.two_font_actions_setting :
+    "not_load";
+const two_worker_base_url = two_get_worker_base();
 let two_css_length = 0;
 let two_connected_css_length = 0;
 let two_uncritical_fonts = null;
 let two_uncritical_fonts_status = false;
-if(two_font_actions == "not_load" || two_font_actions == "exclude_uncritical_fonts"){
+if(two_worker_font_actions == "not_load" || two_worker_font_actions == "exclude_uncritical_fonts"){
     two_uncritical_fonts_status = true;
 }
 
@@ -28,6 +32,14 @@ self.addEventListener("message", function(e) {
 function two_fetch_inbg(data, type, excluded_js = false) {
     for(let i in data){
         if(typeof data[i].url != "undefined"){
+            data[i].url = two_normalize_asset_url(data[i].url);
+            if(type === "font" && typeof data[i].main_url !== "undefined"){
+                data[i].main_url = two_normalize_asset_url(data[i].main_url);
+            }
+            if(!data[i].url){
+                continue;
+            }
+            const requestUrl = data[i].url;
             var modifiedScript = null;
             if(type === "js" && typeof data[i].exclude_blob != "undefined" && data[i].exclude_blob){
                 modifiedScript = {
@@ -43,7 +55,7 @@ function two_fetch_inbg(data, type, excluded_js = false) {
 
 
 
-            fetch(data[i].url, {mode:'no-cors',redirect: 'follow'}).then((r) => {
+            fetch(requestUrl, {mode:'no-cors',redirect: 'follow'}).then((r) => {
                 if (!r.ok || r.status!==200) {
                     throw Error(r.statusText);
                 }
@@ -93,8 +105,8 @@ function two_fetch_inbg(data, type, excluded_js = false) {
                 }
                 two_send_worker_data(modifiedScript);
             }).catch(function(error) {
-                console.log("error in fetching: "+error.toString()+", bypassing "+data[i].url);
-                fetch(data[i].url, {redirect: 'follow'}).then((r) => {
+                console.log("error in fetching: "+error.toString()+", bypassing "+requestUrl);
+                fetch(requestUrl, {redirect: 'follow'}).then((r) => {
                     if (!r.ok || r.status!==200) {
                         throw Error(r.statusText);
                     }
@@ -144,9 +156,9 @@ function two_fetch_inbg(data, type, excluded_js = false) {
                     }
                     two_send_worker_data(modifiedScript);
                 }).catch(function(error) {
-                    console.log("error in fetching no-cors: "+error.toString()+", bypassing "+data[i].url);
+                    console.log("error in fetching no-cors: "+error.toString()+", bypassing "+requestUrl);
                     try {
-                        console.log("error in fetching: "+error.toString()+", sending XMLHttpRequest"+data[i].url);
+                        console.log("error in fetching: "+error.toString()+", sending XMLHttpRequest"+requestUrl);
                         let r = new XMLHttpRequest;
                         if(two_uncritical_fonts_status && type== "css"){
                             r.responseType = "text";
@@ -164,7 +176,7 @@ function two_fetch_inbg(data, type, excluded_js = false) {
                                 two_XMLHttpRequest_error(excluded_js, data[i], type, i);
                                 return;
                             }
-                            console.log("error in fetching: "+error.toString()+", XMLHttpRequest success "+data[i].url);
+                            console.log("error in fetching: "+error.toString()+", XMLHttpRequest success "+requestUrl);
                             let modifiedScript = null;
                             if(type == "css"){
                                 modifiedScript = {
@@ -201,11 +213,11 @@ function two_fetch_inbg(data, type, excluded_js = false) {
                         r.onerror = function () {
                             two_XMLHttpRequest_error(excluded_js, data[i], type, i)
                         };
-                        r.open("GET", data[i].url, true);
+                        r.open("GET", requestUrl, true);
                         r.send();
 
                     } catch (e) {
-                        console.log("error in fetching: "+e.toString()+", running fallback for "+data[i].url);
+                        console.log("error in fetching: "+e.toString()+", running fallback for "+requestUrl);
                         var modifiedScript = null;
                         if(type == "css" || type == "js"){
                             modifiedScript = {
@@ -231,6 +243,50 @@ function two_fetch_inbg(data, type, excluded_js = false) {
                 });
             });
         }
+    }
+}
+
+function two_get_worker_base(){
+    if(typeof self === "undefined" || typeof self.location === "undefined"){
+        return "";
+    }
+    if(self.location.origin && self.location.origin !== "null"){
+        return self.location.origin;
+    }
+    if(self.location.href){
+        const href = self.location.href;
+        if(href.indexOf("blob:") === 0){
+            try{
+                return new URL(href.substring(5)).origin;
+            }catch (e) {
+            }
+        }
+        try{
+            return new URL(href).origin;
+        }catch (e) {
+        }
+    }
+    return "";
+}
+
+function two_normalize_asset_url(url){
+    if(!url || typeof url !== "string"){
+        return url;
+    }
+    if(/^(?:https?:|data:|blob:)/i.test(url)){
+        return url;
+    }
+    if(url.indexOf("//") === 0){
+        const protocol = (self.location && self.location.protocol) ? self.location.protocol : "https:";
+        return protocol + url;
+    }
+    if(!two_worker_base_url){
+        return url;
+    }
+    try{
+        return new URL(url, two_worker_base_url).toString();
+    }catch (e) {
+        return url;
     }
 }
 
@@ -283,5 +339,4 @@ function two_send_worker_data(data){
     }
     self.postMessage(data)
 }
-
 

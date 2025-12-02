@@ -368,7 +368,11 @@
           (i = ["flag", "emoji"]),
           (n.supports = { everything: !0, everythingExceptFlag: !0 }),
           (e = new Promise(function (e) {
-            s.addEventListener("DOMContentLoaded", e, { once: !0 });
+            if (s.readyState === "loading") {
+              s.addEventListener("DOMContentLoaded", e, { once: !0 });
+            } else {
+              e();
+            }
           })),
           new Promise(function (t) {
             var n = (function () {
