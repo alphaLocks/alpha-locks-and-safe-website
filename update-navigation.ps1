@@ -5,8 +5,8 @@
 $ErrorActionPreference = "Stop"
 
 $root = (Get-Location).Path
-$desktopTemplate = Get-Content -Path "nav-desktop-template.html" -Raw
-$mobileTemplate = Get-Content -Path "nav-mobile-template.html" -Raw
+$desktopTemplate = Get-Content -Path "nav-desktop-template.html" -Raw -Encoding UTF8
+$mobileTemplate = Get-Content -Path "nav-mobile-template.html" -Raw -Encoding UTF8
 
 $files = Get-ChildItem -Path . -Filter "index.html" -Recurse |
     Where-Object { $_.FullName -notmatch "\\wp-" }
@@ -17,7 +17,7 @@ foreach ($file in $files) {
         $depth = if ([string]::IsNullOrWhiteSpace($relativeDir)) { 0 } else { ($relativeDir -split "\\").Count }
         $base = ("../" * $depth)
 
-        $content = Get-Content -Path $file.FullName -Raw -ErrorAction Stop
+        $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8 -ErrorAction Stop
         if (-not $content) { continue }
         $original = $content
 
