@@ -113,13 +113,13 @@
         {
           title: 'Hartsdale Locksmith Pros',
           description: 'Local experts dedicated to keeping every block secure.',
-          url: '/securing-hartsdale-your-local-locksmith-lifeline-%f0%9f%8f%a1%f0%9f%94%90/',
+          url: '/securing-hartsdale-your-local-locksmith-lifeline/',
           accent: '#f67c5f',
         },
         {
           title: 'White Plains & Beyond',
           description: 'Community-focused techs serving the entire county.',
-          url: '/locked-out-in-white-plains-alpha-locks-is-your-key-to-peace-of-mind-%f0%9f%94%90%f0%9f%a7%a1%ef%b8%8f/',
+          url: '/locked-out-in-white-plains-alpha-locks-is-your-key-to-peace-of-mind/',
           accent: '#5890f7',
         },
       ],

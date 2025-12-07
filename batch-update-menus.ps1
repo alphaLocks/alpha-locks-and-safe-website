@@ -48,7 +48,8 @@ foreach ($file in $files) {
             Write-Host "Progress: $processed / $totalFiles files processed, $updated updated" -ForegroundColor Yellow
         }
         
-    } catch {
+    }
+    catch {
         Write-Host "Error processing $($file.Name): $_" -ForegroundColor Red
     }
 }
